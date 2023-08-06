@@ -10,6 +10,7 @@ spring:
   batch:
     job:
       names: ${job.name:NONE}
+      enabled: false # 배치가 아닌 스케쥴링만 사용
     jdbc:
       initialize-schema: always
   datasource:
