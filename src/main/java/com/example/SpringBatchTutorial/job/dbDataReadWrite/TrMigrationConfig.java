@@ -52,17 +52,15 @@ public class TrMigrationConfig {
 
     @JobScope
     @Bean
-    public Step trMigrationStep(ItemReader trOrdersReader,
-                                ItemProcessor trOrdersProcessor,
-                                ItemWriter trOrdersWriter
+    public Step trMigrationStep(ItemReader<Orders> trOrdersReader,
+                                ItemProcessor<Orders, Accounts> trOrdersProcessor,
+                                ItemWriter<Accounts> trOrdersWriter
     ) {
         return stepBuilderFactory.get("trMigrationStep")
                 // Orders Entity로 읽어오며, Account Entity로 처리. 5개 데이터 단위로 처리
                 .<Orders, Accounts>chunk(5)
                 .reader(trOrdersReader)
-//                .writer(items -> {
-//                    items.forEach(System.out::println);
-//                })
+//                .writer(System.out::println)
                 .processor(trOrdersProcessor)
                 .writer(trOrdersWriter)
                 .build();
