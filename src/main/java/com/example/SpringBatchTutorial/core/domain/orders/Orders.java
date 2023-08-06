@@ -1,6 +1,8 @@
 package com.example.SpringBatchTutorial.core.domain.orders;
 
+import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.Entity;
@@ -13,6 +15,8 @@ import static javax.persistence.GenerationType.IDENTITY;
 @ToString
 @Getter
 @Entity
+@NoArgsConstructor
+@AllArgsConstructor
 public class Orders {
 
     @Id
