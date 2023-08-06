@@ -1,0 +1,11 @@
+# Git
+https://github.com/junngo/spring-batch-tutorial
+
+# RepositoryItemReader
+https://docs.spring.io/spring-batch/docs/current/reference/html/readersAndWriters.html#repositoryItemReader
+
+# RepositoryItemWriter
+https://docs.spring.io/spring-batch/docs/current/reference/html/readersAndWriters.html#repositoryItemWriter
+
+# Simple Delimited File Reading Example
+https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#simpleDelimitedFileReadingExample

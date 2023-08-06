@@ -20,8 +20,10 @@ public class JobLoggerListener implements JobExecutionListener {
     public void afterJob(JobExecution jobExecution) {
         log.info(AFTER_MESSAGE, jobExecution.getJobInstance().getJobName(), jobExecution.getStatus());
 
+        // job 실패 처리에 대해 별도 로직 실행
         if (jobExecution.getStatus() == BatchStatus.FAILED) {
             // email or messenger send ERROR
+            log.error("Job is failed");
         }
 
     }
