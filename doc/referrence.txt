@@ -1,11 +1,24 @@
 # Git
 https://github.com/junngo/spring-batch-tutorial
 
-# RepositoryItemReader
+
+# Reader And Writer
+## RepositoryItemReader
 https://docs.spring.io/spring-batch/docs/current/reference/html/readersAndWriters.html#repositoryItemReader
 
-# RepositoryItemWriter
+## RepositoryItemWriter
 https://docs.spring.io/spring-batch/docs/current/reference/html/readersAndWriters.html#repositoryItemWriter
 
-# Simple Delimited File Reading Example
+
+# File Example
+## Simple Delimited File Reading Example
 https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#simpleDelimitedFileReadingExample
+
+
+# Steps
+## Conditional Flow
+https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#conditionalFlow
+
+## Sequential Flow
+https://docs.spring.io/spring-batch/docs/current/reference/html/index-single.html#SequentialFlow
+

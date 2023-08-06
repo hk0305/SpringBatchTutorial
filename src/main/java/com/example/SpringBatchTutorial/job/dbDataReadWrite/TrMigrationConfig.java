@@ -28,7 +28,7 @@ import java.util.List;
 
 /**
  * desc: 주문 테이블 -> 정산 테이블 데이터 이관
- * run: --spring.batch.job.names=trMigrationJob
+ * run env: --spring.batch.job.names=trMigrationJob
  */
 @Configuration
 @RequiredArgsConstructor

@@ -1,6 +1,7 @@
 package com.example.SpringBatchTutorial.job.helloWorld;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.StepContribution;
@@ -15,6 +16,7 @@ import org.springframework.batch.repeat.RepeatStatus;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
+@Slf4j
 @Configuration
 @RequiredArgsConstructor
 public class HelloWordJobConfig {
@@ -43,7 +45,7 @@ public class HelloWordJobConfig {
     @Bean
     public Tasklet helloWorldTasklet() {
         return (contribution, chunkContext) -> {
-            System.out.println("Hello World Spring Batch");
+            log.info("Hello World Spring Batch");
             return RepeatStatus.FINISHED;
         };
     }

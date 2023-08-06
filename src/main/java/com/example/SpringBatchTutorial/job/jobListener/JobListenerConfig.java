@@ -1,6 +1,7 @@
 package com.example.SpringBatchTutorial.job.jobListener;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.batch.core.Job;
 import org.springframework.batch.core.Step;
 import org.springframework.batch.core.configuration.annotation.JobBuilderFactory;
@@ -15,8 +16,9 @@ import org.springframework.context.annotation.Configuration;
 
 /**
  * desc: 리스너를 활용하여 job 실행 전/후 로그 작업
- * run: --job.name=jobListenerJob
+ * run env: --spring.batch.job.namesjobListenerJob
  */
+@Slf4j
 @Configuration
 @RequiredArgsConstructor
 public class JobListenerConfig {
@@ -46,7 +48,7 @@ public class JobListenerConfig {
     @Bean
     public Tasklet jobListenerTasklet() {
         return (contribution, chunkContext) -> {
-            System.out.println("Job Listener Tasklet");
+            log.info("Job Listener Tasklet");
             return RepeatStatus.FINISHED;
 //            throw new Exception("Failed!!!!");
         };
